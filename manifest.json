@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Chat Navigator for ChatGPT",
+  "version": "2.6.3",
+  "description": "A local-only sidebar listing your prompts in a ChatGPT conversation. Click one to jump to it.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://*.chatgpt.com/*",
+        "https://chat.openai.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
